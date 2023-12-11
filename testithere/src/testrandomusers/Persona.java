@@ -65,6 +65,12 @@ public class Persona
 	public void setAltura(int altura) {
 		this.altura = altura;
 	}
+
+	@Override
+	public String toString() {
+		return "Persona [iD=" + iD + ", desde=" + desde + ", sexo=" + sexo + ", ojo=" + ojo + ", pelo=" + pelo
+				+ ", altura=" + altura + "]";
+	}
 	
 	
 	
