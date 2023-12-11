@@ -7,7 +7,7 @@ public class Ppal{
 		//System.out.println(utilidadRND.);
 		
 		int tam = 3;
-		Persona [] listaPers = new Persona[tam];
+		Persona [][] listaPers = new Persona[tam][tam];
 		CRUDPersona crudPer = new CRUDPersona(listaPers);
 		crudPer.rellenarLista();
 		

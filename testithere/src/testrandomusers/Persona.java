@@ -68,8 +68,9 @@ public class Persona
 
 	@Override
 	public String toString() {
-		return "Persona [iD=" + iD + ", desde=" + desde + ", sexo=" + sexo + ", ojo=" + ojo + ", pelo=" + pelo
+		return "Persona " + iD + " [desde=" + desde + ", sexo=" + sexo + ", ojo=" + ojo + ", pelo=" + pelo
 				+ ", altura=" + altura + "]";
+		
 	}
 	
 	

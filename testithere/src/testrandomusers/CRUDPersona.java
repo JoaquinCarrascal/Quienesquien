@@ -5,18 +5,27 @@ import java.util.Arrays;
 public class CRUDPersona 
 {
 
-	private Persona [] lista;
+	private Persona [][] lista;
+	private int numPer;
 
-	public CRUDPersona(Persona[] lista) {
+	public CRUDPersona(Persona[][] lista) {
 		this.lista = lista;
 	}
 
-	public Persona[] getLista() {
+	public Persona[][] getLista() {
 		return lista;
 	}
 
-	public void setLista(Persona[] lista) {
+	public void setLista(Persona[][] lista) {
 		this.lista = lista;
+	}
+
+	public int getNumPer() {
+		return numPer;
+	}
+
+	public void setNumPer(int numPer) {
+		this.numPer = numPer;
 	}
 
 	@Override
@@ -55,7 +64,7 @@ public class CRUDPersona
 			sexo = 'M';
 			break;
 		case 2:
-			sexo = 'F';
+			sexo = 'H';
 			break;
 		}
 		
@@ -97,15 +106,21 @@ public class CRUDPersona
 	}
 
 	public void rellenarLista() {
-		
+		int cont = 1;
 		for (int i = 0; i < lista.length; i++) {
-			lista [i] = generarPersona();
+			for (int j = 0; j < lista[i].length; j++) {
+			lista [i][j] = generarPersona();
+			lista[i][j].setiD(cont++);
+			}
 		}
 	}
 	
 	public void mostrarLista() {
 		for (int i = 0; i < lista.length; i++) {
-			System.out.println(lista[i]);
+			for (int j = 0; j < lista[i].length; j++) {
+			System.out.println(lista[i][j]+" ");
+			}
+			
 		}
 	}
 	
